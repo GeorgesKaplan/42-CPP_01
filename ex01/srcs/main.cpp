@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/10 13:15:03 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/14 10:49:39 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/14 11:32:19 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,13 @@ Zombie* zombieHorde(int N, std::string name);
 
 int main(void)
 {
+	int nb = 4;
+	std::string name = "Romero";
 
+	Zombie *horde = zombieHorde(nb, name);
+	for (int i = 0; i < nb; i++)
+	{
+		horde[i].announce();
+	}
+	delete[](horde);
 }

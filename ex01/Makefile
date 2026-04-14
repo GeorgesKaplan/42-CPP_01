@@ -1,4 +1,4 @@
-NAME		= Zombie
+NAME		= ZombieHorde
 COMP		= c++
 FLAGS		= -Wall -Wextra -Werror -g
 SRCS_DIR	= srcs/
