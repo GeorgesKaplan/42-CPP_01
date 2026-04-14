@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   WalkingDead.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/10 13:15:06 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/14 10:27:10 by dnantet          ###   ########.fr       */
+/*   Created: 2026/04/14 10:27:03 by dnantet           #+#    #+#             */
+/*   Updated: 2026/04/14 10:32:30 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-void Zombie::announce()
+Zombie* newZombie(std::string name)
 {
-	std::cout << this->_name << GRUNT << std::endl;
+	return (new Zombie(name));
 }
 
-Zombie::Zombie(std::string name)
+void randomChump( std::string name )
 {
-	this->_name = name;
-	std::cout << "Zombie '" << this->_name << "' has risen!" << std::endl;
-}
-
-Zombie::~Zombie()
-{
-	std::cout << "Zombie '" << this->_name << "' has been sent back six feet under." << std::endl;
+	Zombie zmb = Zombie(name);
+	zmb.announce();
 }

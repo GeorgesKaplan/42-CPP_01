@@ -5,6 +5,7 @@ SRCS_DIR	= srcs/
 OBJS_DIR	= objs/
 INCLUDES	= -Iincludes
 SRCS		=	main.cpp \
+				WalkingDead.cpp \
 				\
 				classes/Zombie.cpp
 SRCS		:= $(addprefix $(SRCS_DIR), $(SRCS))
