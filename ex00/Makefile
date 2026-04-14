@@ -3,7 +3,7 @@ COMP		= c++
 FLAGS		= -Wall -Wextra -Werror -g
 SRCS_DIR	= srcs/
 OBJS_DIR	= objs/
-INCLUDES	= -Iincludes
+INCLUDES	= -Iinclude
 SRCS		=	main.cpp \
 				newZombie.cpp \
 				randomChump.cpp \
