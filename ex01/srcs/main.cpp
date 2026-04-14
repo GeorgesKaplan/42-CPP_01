@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/10 13:15:03 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/14 11:32:19 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/14 12:31:03 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,5 @@ int main(void)
 		horde[i].announce();
 	}
 	delete[](horde);
+	return (0);
 }
