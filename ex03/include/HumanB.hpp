@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 13:10:27 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/14 15:48:34 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/14 16:12:39 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ class HumanB
 {
 private:
 	std::string	_name;
-	Weapon		_weapon;
+	Weapon		*_weapon;
 public:
 	void setName(std::string name);
 	std::string getName();

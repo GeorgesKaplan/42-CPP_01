@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 13:10:17 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/14 15:54:41 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/14 16:22:12 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ std::string HumanB::getName()
 
 void HumanB::setWeapon(Weapon weapon)
 {
-	this->_weapon = weapon;
+	this->_weapon = &weapon;
 }
 
 Weapon HumanB::getWeapon()
 {
-	return (this->_weapon);
+	return *(_weapon);
 }
 
 void HumanB::attack()
@@ -39,7 +39,7 @@ void HumanB::attack()
 
 HumanB::HumanB(std::string name)
 {
-
+	this->setName(name);
 }
 
 HumanB::~HumanB()

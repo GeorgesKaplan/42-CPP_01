@@ -4,7 +4,11 @@ FLAGS		= -Wall -Wextra -Werror -g
 SRCS_DIR	= srcs/
 OBJS_DIR	= objs/
 INCLUDES	= -Iinclude
-SRCS		= main.cpp
+SRCS		=	main.cpp \
+				\
+				classes/Weapon.cpp \
+				classes/HumanA.cpp \
+				classes/HumanB.cpp
 SRCS		:= $(addprefix $(SRCS_DIR), $(SRCS))
 OBJS		:= $(SRCS:$(SRCS_DIR)%.cpp=$(OBJS_DIR)%.o)
 

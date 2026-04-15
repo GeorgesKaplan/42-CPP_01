@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 13:10:09 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/14 15:48:38 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/14 16:16:49 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ class HumanA
 {
 private:
 	std::string	_name;
-	Weapon		_weapon;
+	Weapon		&_weapon;
 public:
 	void setName(std::string name);
 	std::string getName();
@@ -24,6 +24,6 @@ public:
 	Weapon getWeapon();
 	void attack();
 
-	HumanA(std::string name, Weapon weapon);
+	HumanA(std::string name, Weapon &weapon);
 	~HumanA();
 };
