@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 12:33:39 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/16 15:06:19 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/16 15:25:14 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,19 @@ void Harl::complain(std::string level)
 	{
 		case DEBUG:
 			debug();
+			info();
+			warning();
+			error();
+			break ;
 		case INFO:
 			info();
+			warning();
+			error();
+			break ;
 		case WARNING:
 			warning();
+			error();
+			break ;
 		case ERROR:
 			error();
 			break ;
