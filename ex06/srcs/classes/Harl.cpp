@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 12:33:39 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/16 15:25:14 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/16 16:34:50 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,22 +19,25 @@ void Harl::invalid(void)
 
 void Harl::debug(void)
 {
-	std::cout << "Debug: There are no bugs... Yet." << std::endl;
+	std::cout << "DEBUG   | There are no bugs... Yet." << std::endl;
+	Harl::info();
 }
 
 void Harl::info(void)
 {
-	std::cout << "Info: Harl is not here to be nice to you." << std::endl;
+	std::cout << "INFO    | Harl is not here to be nice to you." << std::endl;
+	Harl::warning();
 }
 
 void Harl::warning(void)
 {
-	std::cout << "Warning: Your code is ugly." << std::endl;
+	std::cout << "WARNING | Your code is ugly." << std::endl;
+	Harl::error();
 }
 
 void Harl::error(void)
 {
-	std::cout << "Error: Your code is broken. Did you ask an AI to do it?" << std::endl;
+	std::cout << "ERROR   | Your code is broken. Did you ask an AI to do it?" << std::endl;
 }
 
 void Harl::complain(std::string level)
@@ -49,18 +52,12 @@ void Harl::complain(std::string level)
 	{
 		case DEBUG:
 			debug();
-			info();
-			warning();
-			error();
 			break ;
 		case INFO:
 			info();
-			warning();
-			error();
 			break ;
 		case WARNING:
 			warning();
-			error();
 			break ;
 		case ERROR:
 			error();
