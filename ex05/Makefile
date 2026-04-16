@@ -4,7 +4,9 @@ FLAGS		= -Wall -Wextra -Werror -g -std=c++98
 SRCS_DIR	= srcs/
 OBJS_DIR	= objs/
 INCLUDES	= -Iinclude
-SRCS		= main.cpp
+SRCS		=	main.cpp\
+				\
+				classes/Harl.cpp
 SRCS		:= $(addprefix $(SRCS_DIR), $(SRCS))
 OBJS		:= $(SRCS:$(SRCS_DIR)%.cpp=$(OBJS_DIR)%.o)
 

@@ -6,11 +6,16 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 12:33:39 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/16 12:47:13 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/16 13:46:27 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
+
+void Harl::invalid(void)
+{
+	std::cout << "Harl has no idea what you're talking about." << std::endl;
+}
 
 void Harl::debug(void)
 {
@@ -34,13 +39,22 @@ void Harl::error(void)
 
 void Harl::complain(std::string level)
 {
+	const char		*enum_elts[_LEVEL_END] = {"INVALID", "DEBUG", "INFO", "WARNING", "ERROR"};
+	const ptr_func	func_tab[_LEVEL_END] = {&Harl::invalid, &Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 
+	size_t index = 0;
+	for (size_t i = 0; i < _LEVEL_END  && level.compare(enum_elts[i]); i++)
+		index++;
+
+	(this->*func_tab[(index < _LEVEL_END) * index])();
 }
 
 Harl::Harl()
 {
+	std::cout << "Harl has come to review your code." << std::endl;
 }
 
 Harl::~Harl()
 {
+	std::cout << "Harl has had enough of this." << std::endl;
 }
