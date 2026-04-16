@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 12:07:10 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/15 13:30:01 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/16 11:50:05 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,14 @@ int main(int ac, char *av[])
 	}
 
 	char *infile = av[1];
-	std::string to_search = av[2];
-	std::string replace_with = av[3];
+	char *to_search = av[2];
+	char *replace_with = av[3];
+
+	if ((std::string)to_search == "" || (std::string)replace_with == "")
+	{
+		std::cout << "Error: <to_search> and <replace_with> can't be empty strings." << std::endl;
+		return (1);
+	}
 
 	std::fstream fs;
 	fs.open(infile, std::fstream::in);
@@ -41,14 +47,27 @@ int main(int ac, char *av[])
 		return (1);
 	}
 
+	std::string line;
+	std::string txt;
+	while (getline(fs, line))
+	{
+		txt += line + "\n";
+	}
 
-	// std::string line;
-	// while (getline(fs, line))
-	// {
-	// 	std::cout << line << std::endl;
-	// }
-
+	int pos = 0;
+	for (size_t i = 0; i < txt.size(); i++)
+	{
+		pos = txt.find(to_search, i);
+		if (pos != -1 && pos == (int)i)
+		{
+			ofs << replace_with;
+			i += std::string(to_search).size() - 1;
+		}
+		else
+			ofs << txt[i];
+	}
 
 	fs.close();
+	ofs.close();
 	return (0);
 }
