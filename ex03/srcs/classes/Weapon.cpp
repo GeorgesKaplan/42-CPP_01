@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 13:10:15 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/15 12:03:54 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/23 15:38:02 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void Weapon::setType(std::string wtype)
 {
-	this->type = wtype;
+	this->_type = wtype;
 }
 
 const std::string &Weapon::getType()
 {
-	return (this->type);
+	return (this->_type);
 }
 
 Weapon::Weapon(std::string wtype)

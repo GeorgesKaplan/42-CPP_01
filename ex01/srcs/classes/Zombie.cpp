@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/10 13:15:06 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/14 11:04:34 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/23 15:38:37 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ Zombie::Zombie(std::string name)
 
 Zombie::Zombie(void)
 {
-
 }
 
 Zombie::~Zombie()

@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 13:10:24 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/15 12:03:49 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/23 15:37:45 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 class Weapon
 {
 private:
-	std::string type;
+	std::string _type;
 
 public:
 	void		setType(std::string wtype);
