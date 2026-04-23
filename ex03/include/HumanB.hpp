@@ -6,9 +6,12 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 13:10:27 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/15 11:38:41 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/23 12:39:00 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
 
 #include "Weapon.hpp"
 
@@ -27,3 +30,5 @@ public:
 	HumanB(std::string name);
 	~HumanB();
 };
+
+#endif

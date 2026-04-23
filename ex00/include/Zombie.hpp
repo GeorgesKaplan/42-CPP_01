@@ -6,11 +6,10 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/10 13:16:19 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/12 13:52:40 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/23 12:38:47 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
 #ifndef ZOMBIE_HPP
 # define ZOMBIE_HPP
 
