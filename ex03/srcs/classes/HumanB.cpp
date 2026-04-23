@@ -6,7 +6,7 @@
 /*   By: dnantet <dnantet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 13:10:17 by dnantet           #+#    #+#             */
-/*   Updated: 2026/04/15 11:38:30 by dnantet          ###   ########.fr       */
+/*   Updated: 2026/04/23 15:22:30 by dnantet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,17 @@ Weapon HumanB::getWeapon()
 
 void HumanB::attack()
 {
+	if (this->_weapon == NULL)
+	{
+		std::cout << this->getName() << " attacks with their bare hands" << std::endl;
+		return ;
+	}
 	std::cout << this->getName() << " attacks with " << this->getWeapon().getType() << std::endl;
 }
 
 HumanB::HumanB(std::string name)
 {
+	this->_weapon = NULL;
 	this->setName(name);
 }
 
